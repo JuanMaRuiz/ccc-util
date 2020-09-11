@@ -1,0 +1,22 @@
+{
+  "name": "ccc-util",
+  "version": "1.0.0",
+  "description": "Util to validate CCC code. It also can be used to generate a valid CCC for testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "ccc",
+    "util",
+    "bank",
+    "account"
+  ],
+  "author": "JuanMa Ruiz",
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "eslint": "^7.8.1",
+    "jest": "^26.4.2"
+  }
+}
