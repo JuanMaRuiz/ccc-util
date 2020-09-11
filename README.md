@@ -14,24 +14,6 @@ npm i ccc-util --save-dev
 ## Usage
 
 ```bash
-const { validate, generate } = require('ccc-util');
 
-validate('84-481-2231-3');
-//=> true
-
-validate('0137081073');
-//=> true
-
-validate('isbn: 84-481-2231-3');
-//=> false
-
-generate('13');
-//=> '9780137081073'
-
-generate('13', 'prefix');
-//=> 'isbn-13: 9780137081073'
-
-generate('10');
-//=> '8448122313'
 ```
 
