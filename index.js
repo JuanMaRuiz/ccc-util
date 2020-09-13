@@ -1,4 +1,4 @@
-const validate = require('./src/validate.js');
+const validate = require('./src/validator.js');
 
 
 module.exports = {
