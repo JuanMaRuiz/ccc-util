@@ -18,7 +18,7 @@ Title: Add support for new Country
 * **Validation**: _Link to info about how to validade the account_
 ```
 
-* ***Open a Pull request** adding your own validation.
+* **Open a Pull request** adding your own validation.
 
 ## Install
 
@@ -37,7 +37,7 @@ validate('14650100 97 1716610913'); //=> true
 
 validate('0137081073'); //=> false
 
-validate('0049-1500-05-1234567890); //=> false
+validate('0049-1500-05-1234567890'); //=> false
 ```
 
 ### Reference
