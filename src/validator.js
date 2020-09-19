@@ -31,14 +31,39 @@ const getControlDigit = (str) => {
 
 };
 
-const validate = (ccc) => {
+const checkInstitution = (institution) => {
+  if (typeof institution === 'string') {
+    return true;
+  } else {
+    throw 'Institution is not a valid string';
+  }
+};
+
+const validateBankEnity = ({ institutionName, country, entityCode}) => {
+  const institutionCodes = require(`./${country}-institution-list.js`);
+  return institutionCodes[`ES${entityCode.substring(2, 6)}`] === institutionName;
+};
+
+const validate = (ccc, { institution = '', country = 'es' } = {}) => {
   const cccSanitized = formatString(ccc);
   const entityOfficeNumber = getEntityAndOfficeNumbers(cccSanitized);
+  let isValidBankEntity = true;
+
+  if (checkInstitution(institution) && institution !== '') {
+    isValidBankEntity = validateBankEnity({
+      institutionName: institution,
+      country: country,
+      entityCode: entityOfficeNumber
+    });
+  }
+
   const accountNumber = getAccountNumber(cccSanitized);
   const firstControlDigit = getControlDigit(entityOfficeNumber);
   const secondControlDigit = getControlDigit(accountNumber);
 
-  return parseInt(cccSanitized.substring(8,9)) === firstControlDigit && parseInt(cccSanitized.substring(9,10)) === secondControlDigit;
+  return parseInt(cccSanitized.substring(8, 9)) === firstControlDigit &&
+        parseInt(cccSanitized.substring(9, 10)) === secondControlDigit &&
+        isValidBankEntity;
 };
 
 module.exports = validate;
