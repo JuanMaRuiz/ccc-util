@@ -3,7 +3,7 @@
 
 # CCC Util
 
-This module provide a `validate` method to check if the given CCC is valid or not. 
+This module provides a `validate` method to check if a given CCC is valid or not. 
 
 | Option | Type | Required | Description |
 |-------------|-----------|----------|----------|
@@ -13,7 +13,7 @@ This module provide a `validate` method to check if the given CCC is valid or no
 
 **Note**
 
-Due the different logic to validate bank account depending on the Country. This validator is only valid for **Spain** bank accounts. If you are interested in this validator and you want to add a new country, you can:
+Due the different logic to validate a bank account depending on the Country. This validator is only valid for **Spain** bank accounts. If you are interested in this validator and you want to add a new country, you can:
 
 * **Open an issue like this:**
 
