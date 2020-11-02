@@ -34,6 +34,9 @@ npm i ccc-util --save-dev
 ## Usage
 
 ### Passing only a CCC
+
+Use this if you are interested in validate only the account number.
+
 ```bash
 const { validate } = require('ccc-util');
 
@@ -48,11 +51,13 @@ validate('0049-1500-05-1234567890'); //=> false
 
 ### Passing CCC and institution name
 
+Optionally you can pass a second argument to `validate` method, the `institution`. If passed `ccc-util` will validate the account number with the institution name. If both are valid the result will be `true`, `false` otherwise. 
+
 ```bash
 const { validate } = require('ccc-util');
 
 validate('0144 9181 1115 8790 3375', { institution: 'BNP Paribas Securities Services, S.E.') //=> true
-validate('0144 9181 1115 8790 3375', { institution: 'BNP Paribas Securities Services') //=> flase
+validate('0144 9181 1115 8790 3375', { institution: 'BNP Paribas Securities Services') //=> false
 ```
 
 ### Codes of banking entities in Spain

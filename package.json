@@ -24,5 +24,8 @@
     "type": "git",
     "url": "https://github.com/JuanMaRuiz/ccc-util.git"
   },
-  "homepage": "https://github.com/JuanMaRuiz/ccc-util"
+  "homepage": "https://github.com/JuanMaRuiz/ccc-util",
+  "dependencies": {
+    "@fnzc/nz-bank-account-validator": "^1.0.3"
+  }
 }
