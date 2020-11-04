@@ -78,6 +78,11 @@ In the list below you will find some of the codes of monetary financial institut
 | ES2048 | Liberbank, S.A.|
 | ES0073 | Open Bank, S.A.|
 
+### Available validators
+
+* Spain account validator.
+* NZ account validator
+
 ### Reference
 
 * [How to validate an Spanish CCC](https://es.wikipedia.org/wiki/Código_cuenta_cliente#D%C3%ADgitos_de_control)

@@ -1,6 +1,6 @@
 {
   "name": "ccc-util",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Util to validate CCC code. It also can be used to generate a valid CCC for testing purposes",
   "main": "index.js",
   "scripts": {
