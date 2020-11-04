@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/JuanMaRuiz/ccc-util.svg?branch=master)](https://travis-ci.org/JuanMaRuiz/ccc-util)
 [![Coverage Status](https://coveralls.io/repos/github/JuanMaRuiz/ccc-util/badge.svg?branch=master)](https://coveralls.io/github/JuanMaRuiz/ccc-util?branch=master)
+[![Coverage Status](https://img.shields.io/npm/v/ccc-util)](https://img.shields.io/npm/v/ccc-util)
 
 # CCC Util
 
