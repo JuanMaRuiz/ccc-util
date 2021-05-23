@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   'ES0241': 'A&G Banca Privada, S.A.',
   'ES2080': 'Abanca Corporación Bancaria, S.A.',
   'ES8620': 'Abanca Servicios Financieros E.F.C., S.A.',

@@ -1,4 +1,4 @@
-const { isValidNZBankNumber } = require('@fnzc/nz-bank-account-validator');
+import { isValidNZBankNumber } from '@fnzc/nz-bank-account-validator';
 
 // '00', '0000', '00000000', '000'
 const getFormattedAccountNumber = (ccc) => {
@@ -15,9 +15,7 @@ const getFormattedAccountNumber = (ccc) => {
   };
 };
 
-const validate = (ccc) => {
+export const NZValidator = (ccc) => {
   const { group1, group2, group3, group4 } = getFormattedAccountNumber(ccc);
   return isValidNZBankNumber(group1, group2, group3, group4);
-}
-
-module.exports = validate;
+};

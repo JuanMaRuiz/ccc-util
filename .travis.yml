@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-  - '14'
-  - '12'
-  - '10'
+  - '14.13.1'
+  - '12.20.0'
 
 script: echo "Running tests against $(node -v)..."
 
 jobs:
   include:
-    - stage: Produce Coverage
+    - stage: Test
       node_js: node
-      script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+      script: npm test
