@@ -1,3 +1,5 @@
+import institutionCodes from './../es-institution-list.js';
+
 const formatString = string => string.split('-').join('').replace(/\s/g, '');
 
 const factors = [1, 2, 4, 8, 5, 10, 9, 7, 3, 6];
@@ -39,12 +41,11 @@ const checkInstitution = (institution) => {
   }
 };
 
-const validateBankEnity = ({ institutionName, country, entityCode}) => {
-  const institutionCodes = require(`./../${country}-institution-list.js`);
+const validateBankEnity = ({ institutionName, entityCode}) => {
   return institutionCodes[`ES${entityCode.substring(2, 6)}`] === institutionName;
 };
 
-const validator = (ccc, { institution = '', country = 'es'} = {}) => {
+export const ESValidator = (ccc, { institution = ''} = {}) => {
   const cccSanitized = formatString(ccc);
   const entityOfficeNumber = getEntityAndOfficeNumbers(cccSanitized);
   let isValidBankEntity = true;
@@ -52,7 +53,6 @@ const validator = (ccc, { institution = '', country = 'es'} = {}) => {
   if (checkInstitution(institution) && institution !== '') {
     isValidBankEntity = validateBankEnity({
       institutionName: institution,
-      country: country,
       entityCode: entityOfficeNumber
     });
   }
@@ -65,5 +65,3 @@ const validator = (ccc, { institution = '', country = 'es'} = {}) => {
         parseInt(cccSanitized.substring(9, 10)) === secondControlDigit &&
         isValidBankEntity;
 };
-
-module.exports = validator;
